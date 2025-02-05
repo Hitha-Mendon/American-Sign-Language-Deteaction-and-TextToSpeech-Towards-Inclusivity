@@ -56,7 +56,28 @@ cd ASL-Gesture-Recognition
 
 Usage:
 
-Run the main script
+1)Collect dataset in real-time:
+
+python collect_images.py
+
+This will capture hand gesture images via webcam.
+
+
+2)Create dataset (pickle file):
+
+python create_dataset.py
+
+This will process and store the collected data in a pickle file.
+
+
+3)Train the Random Forest model:
+
+python train_classifier.py
+
+This will train the model and save it as model.p.
+
+
+4)Run real-time detection and text-to-speech conversion
 
 python inference_classifier.py
 
@@ -67,6 +88,10 @@ The system detects and classifies gestures in real time.
 Recognized gestures are converted into text and displayed.
 
 Press the 'Speak' button to hear the text output.
+
+
+You can directly run python inference_classifier.py as the already trained model is uploaded.
+
 
 
 
